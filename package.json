@@ -1,15 +1,25 @@
 {
-  "name": "kentro",
-  "version": "1.0.0",
-  "description": "",
-  "main": "main.js",
+  "name": "kentro-platform",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Plataforma Kentro: Desktop, API, web, admin y migraciones.",
+  "workspaces": [
+    "apps/*",
+    "services/*",
+    "packages/*",
+    "./kentro-migrations"
+  ],
   "scripts": {
-    "start": "electron ."
+    "start": "npm --workspace apps/kentro-desktop run start",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "desktop:start": "npm --workspace apps/kentro-desktop run start",
+    "api:dev": "npm --workspace services/kentro-api run dev",
+    "db:migrate": "npm --workspace kentro-migrations run migrate"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "devDependencies": {
     "electron": "^44.1.1"
   },

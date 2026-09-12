@@ -1,0 +1,10 @@
+{
+  "name": "@kentro/desktop",
+  "version": "0.1.0",
+  "private": true,
+  "main": "electron/main.js",
+  "scripts": {
+    "start": "electron ../../main.js",
+    "test": "node --check ../../main.js && node --check ../../preload.js"
+  }
+}

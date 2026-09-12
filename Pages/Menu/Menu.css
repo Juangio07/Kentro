@@ -155,7 +155,7 @@ select {
     /* FORMA ORIGINAL DE LA K */
 
     -webkit-mask-image:
-        url("../../Assets/Logos/01_Kentro_Isotipo.png");
+        url("../../Assets/Logos/Logo.png");
 
     -webkit-mask-repeat:
         no-repeat;
@@ -168,7 +168,7 @@ select {
 
 
     mask-image:
-        url("../../Assets/Logos/01_Kentro_Isotipo.png");
+        url("../../Assets/Logos/Logo.png");
 
     mask-repeat:
         no-repeat;
@@ -2173,3 +2173,8 @@ tbody tr:last-child td {
         display: none;
     }
 }
+
+/* Recursos oficiales: imagotipo expandido y K contraída. */
+.kentro-imagotipo { width: 154px; height: auto; display: block; object-fit: contain; }
+.kentro-logo-mini { width: 42px; height: 42px; display: block; object-fit: contain; }
+.sidebar.collapsed .kentro-logo-mini { width: 40px; height: 40px; }

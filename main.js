@@ -18,7 +18,7 @@ function crearVentana() {
             __dirname,
             "Assets",
             "Iconos",
-            "Kentro.ico"
+            "App.png"
         ),
 
         webPreferences: {

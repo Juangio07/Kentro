@@ -6,24 +6,23 @@
        ========================================================== */
 
     /*
-       Estos colores podrán cambiar desde
-       Personalización > Apariencia
+       Estos colores forman parte de la identidad oficial de Kentro.
     */
 
-    --brand-primary: #65D20B;
+    --brand-primary: #2563FF;
 
-    --brand-primary-hover: #54B90A;
+    --brand-primary-hover: #0EA5FF;
 
-    --brand-primary-light: #8BEA16;
+    --brand-primary-light: #22D3EE;
 
-    --brand-primary-soft: #EAFBDA;
+    --brand-primary-soft: #DBF7FF;
 
     /*
        Color del texto que se muestra
        encima del color principal.
     */
 
-    --brand-on-primary: #080C0A;
+    --brand-on-primary: #FFFFFF;
 
 
 
@@ -31,15 +30,20 @@
        IDENTIDAD BASE DE KENTRO
        ========================================================== */
 
-    --kentro-black: #080C0A;
+    --kentro-black: #071426;
 
-    --kentro-graphite: #101713;
+    --kentro-graphite: #0B1E3F;
 
-    --kentro-dark-soft: #18211B;
+    --kentro-dark-soft: #0F2547;
 
-    --kentro-green: #65D20B;
+    --kentro-green: #14B8A6;
 
-    --kentro-green-light: #8BEA16;
+    --kentro-green-light: #22D3EE;
+
+    --kentro-cobalt: #2563FF;
+    --kentro-blue: #0EA5FF;
+    --kentro-cyan: #22D3EE;
+    --kentro-teal: #14B8A6;
 
 
 
@@ -47,19 +51,19 @@
        FONDOS
        ========================================================== */
 
-    --background-main: #F5F7F5;
+    --background-main: #F4F8FC;
 
-    --background-secondary: #EEF2EF;
+    --background-secondary: #EAF2FA;
 
     --background-card: #FFFFFF;
 
-    --background-sidebar: #080C0A;
+    --background-sidebar: #0B1E3F;
 
-    --background-sidebar-secondary: #101713;
+    --background-sidebar-secondary: #0F2547;
 
     --background-input: #FFFFFF;
 
-    --background-hover: #F7FAF7;
+    --background-hover: #F1F7FF;
 
 
 
@@ -149,22 +153,22 @@
 
     --shadow-xs:
         0 1px 2px
-        rgba(8, 12, 10, 0.04);
+        rgba(7, 20, 38, 0.06);
 
 
     --shadow-sm:
         0 2px 6px
-        rgba(8, 12, 10, 0.06);
+        rgba(7, 20, 38, 0.08);
 
 
     --shadow-md:
         0 6px 18px
-        rgba(8, 12, 10, 0.08);
+        rgba(7, 20, 38, 0.10);
 
 
     --shadow-lg:
         0 18px 45px
-        rgba(8, 12, 10, 0.12);
+        rgba(7, 20, 38, 0.14);
 
 
 
@@ -174,12 +178,12 @@
 
     --shadow-brand:
         0 8px 24px
-        rgba(101, 210, 11, 0.18);
+        rgba(37, 99, 255, 0.20);
 
 
     --focus-brand:
         0 0 0 3px
-        rgba(101, 210, 11, 0.12);
+        rgba(37, 99, 255, 0.16);
 
 
 
@@ -189,11 +193,11 @@
 
     --radius-xs: 4px;
 
-    --radius-sm: 6px;
+    --radius-sm: 8px;
 
-    --radius-md: 10px;
+    --radius-md: 12px;
 
-    --radius-lg: 14px;
+    --radius-lg: 16px;
 
     --radius-xl: 18px;
 

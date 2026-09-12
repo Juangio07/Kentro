@@ -11,8 +11,10 @@ body {
     height: 100%;
 }
 
-body {
+    body {
     font-family:
+        Inter,
+        "Segoe UI",
         Arial,
         Helvetica,
         sans-serif;

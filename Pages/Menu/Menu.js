@@ -289,15 +289,14 @@ function cargarLogoNegocio(
 function aplicarTemaNegocio(
     tema
 ) {
-
-    if (
-        !tema ||
-        !tema.primary
-    ) {
-
-        return;
-
-    }
+    // La identidad oficial de Kentro no puede ser reemplazada por datos locales antiguos.
+    tema = {
+        primary: "#2563FF",
+        hover: "#0EA5FF",
+        light: "#22D3EE",
+        soft: "#DBF7FF",
+        onPrimary: "#FFFFFF"
+    };
 
 
     const root =
@@ -320,7 +319,7 @@ function aplicarTemaNegocio(
 
     const colorSuave =
         tema.soft ||
-        "#EAFBDA";
+        "#DBF7FF";
 
 
     const colorTexto =
@@ -643,23 +642,6 @@ navItems.forEach(
                     normalizarModulo(
                         modulo
                     );
-
-
-                /* ============================================
-                   PERSONALIZACIÓN
-                   ============================================ */
-
-                if (
-                    moduloNormalizado ===
-                    "personalizacion"
-                ) {
-
-                    window.location.href =
-                        "../Personalizacion/Personalizacion.html";
-
-                    return;
-
-                }
 
 
                 /* ============================================
