@@ -1,0 +1,235 @@
+:root {
+
+    /* ==========================================================
+       KENTRO
+       IDENTIDAD DE MARCA PERSONALIZABLE
+       ========================================================== */
+
+    /*
+       Estos colores podrán cambiar desde
+       Personalización > Apariencia
+    */
+
+    --brand-primary: #65D20B;
+
+    --brand-primary-hover: #54B90A;
+
+    --brand-primary-light: #8BEA16;
+
+    --brand-primary-soft: #EAFBDA;
+
+    /*
+       Color del texto que se muestra
+       encima del color principal.
+    */
+
+    --brand-on-primary: #080C0A;
+
+
+
+    /* ==========================================================
+       IDENTIDAD BASE DE KENTRO
+       ========================================================== */
+
+    --kentro-black: #080C0A;
+
+    --kentro-graphite: #101713;
+
+    --kentro-dark-soft: #18211B;
+
+    --kentro-green: #65D20B;
+
+    --kentro-green-light: #8BEA16;
+
+
+
+    /* ==========================================================
+       FONDOS
+       ========================================================== */
+
+    --background-main: #F5F7F5;
+
+    --background-secondary: #EEF2EF;
+
+    --background-card: #FFFFFF;
+
+    --background-sidebar: #080C0A;
+
+    --background-sidebar-secondary: #101713;
+
+    --background-input: #FFFFFF;
+
+    --background-hover: #F7FAF7;
+
+
+
+    /* ==========================================================
+       TEXTOS
+       ========================================================== */
+
+    --text-primary: #111813;
+
+    --text-secondary: #66706A;
+
+    --text-light: #8A948E;
+
+    --text-muted: #9DA6A0;
+
+    --text-white: #FFFFFF;
+
+    --text-sidebar: #B8C1BB;
+
+
+
+    /* ==========================================================
+       BORDES
+       ========================================================== */
+
+    --border-color: #E2E8E3;
+
+    --border-color-dark: #CDD6CF;
+
+    --border-sidebar:
+        rgba(255, 255, 255, 0.06);
+
+
+
+    /* ==========================================================
+       ESTADOS DEL SISTEMA
+       NO PERSONALIZABLES
+       ========================================================== */
+
+    /*
+       Estos colores conservan siempre el mismo significado
+       sin importar la identidad del negocio.
+    */
+
+    --success: #16A34A;
+
+    --success-hover: #15803D;
+
+    --success-light: #DCFCE7;
+
+
+    --warning: #F59E0B;
+
+    --warning-hover: #D97706;
+
+    --warning-light: #FEF3C7;
+
+
+    --danger: #DC2626;
+
+    --danger-hover: #B91C1C;
+
+    --danger-light: #FEE2E2;
+
+
+    --info: #0EA5E9;
+
+    --info-hover: #0284C7;
+
+    --info-light: #E0F2FE;
+
+
+
+    /* ==========================================================
+       CRÉDITOS / ESTADOS ESPECIALES
+       ========================================================== */
+
+    --credit: #7C3AED;
+
+    --credit-light: #EDE9FE;
+
+
+
+    /* ==========================================================
+       SOMBRAS
+       ========================================================== */
+
+    --shadow-xs:
+        0 1px 2px
+        rgba(8, 12, 10, 0.04);
+
+
+    --shadow-sm:
+        0 2px 6px
+        rgba(8, 12, 10, 0.06);
+
+
+    --shadow-md:
+        0 6px 18px
+        rgba(8, 12, 10, 0.08);
+
+
+    --shadow-lg:
+        0 18px 45px
+        rgba(8, 12, 10, 0.12);
+
+
+
+    /* ==========================================================
+       SOMBRAS DE MARCA
+       ========================================================== */
+
+    --shadow-brand:
+        0 8px 24px
+        rgba(101, 210, 11, 0.18);
+
+
+    --focus-brand:
+        0 0 0 3px
+        rgba(101, 210, 11, 0.12);
+
+
+
+    /* ==========================================================
+       BORDES REDONDEADOS
+       ========================================================== */
+
+    --radius-xs: 4px;
+
+    --radius-sm: 6px;
+
+    --radius-md: 10px;
+
+    --radius-lg: 14px;
+
+    --radius-xl: 18px;
+
+    --radius-pill: 999px;
+
+
+
+    /* ==========================================================
+       TRANSICIONES
+       ========================================================== */
+
+    --transition-fast:
+        0.15s ease;
+
+    --transition-normal:
+        0.25s ease;
+
+    --transition-slow:
+        0.35s ease;
+
+
+
+    /* ==========================================================
+       SIDEBAR
+       ========================================================== */
+
+    --sidebar-width: 245px;
+
+    --sidebar-width-collapsed: 78px;
+
+
+
+    /* ==========================================================
+       TOPBAR
+       ========================================================== */
+
+    --topbar-height: 76px;
+
+}

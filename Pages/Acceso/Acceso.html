@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Kentro | Sistema de control</title>
+
+
+    <!-- =====================================================
+         FONT AWESOME
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         ESTILOS GENERALES
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../../Shared/Css/Variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../Shared/Css/Global.css"
+    >
+
+
+    <!-- =====================================================
+         ESTILOS DEL ACCESO
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="Acceso.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         ACCESO
+         ===================================================== -->
+
+    <main class="Acceso">
+
+
+        <!-- =================================================
+             TARJETA DE ACCESO
+             ================================================= -->
+
+        <section class="Acceso-card">
+
+
+            <!-- =================================================
+                 MARCA KENTRO DINÁMICA
+                 ================================================= -->
+
+            <div class="marca">
+
+                <div
+                    class="marca-kentro-dinamica"
+                    aria-label="Kentro"
+                >
+
+
+                    <!-- K DINÁMICA -->
+
+                    <span
+                        class="kentro-k-acceso"
+                        aria-hidden="true"
+                    ></span>
+
+
+                    <!-- NOMBRE -->
+
+                    <span class="kentro-nombre-acceso">
+                        Kentro
+                    </span>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 ENCABEZADO
+                 ================================================= -->
+
+            <div class="encabezado">
+
+                <h1>
+                    Bienvenido
+                </h1>
+
+                <p>
+                    Inicia sesión para continuar
+                </p>
+
+            </div>
+
+
+            <!-- =================================================
+                 FORMULARIO
+                 ================================================= -->
+
+            <form
+                id="loginForm"
+                autocomplete="off"
+            >
+
+
+                <!-- =================================================
+                     USUARIO
+                     ================================================= -->
+
+                <div class="campo">
+
+                    <label for="usuario">
+                        Usuario
+                    </label>
+
+
+                    <div class="input-wrapper">
+
+                        <input
+                            type="text"
+                            id="usuario"
+                            name="usuario"
+                            placeholder="Ingrese su usuario"
+                            autocomplete="username"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     CONTRASEÑA
+                     ================================================= -->
+
+                <div class="campo">
+
+                    <label for="password">
+                        Contraseña
+                    </label>
+
+
+                    <div class="input-wrapper password-wrapper">
+
+
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Ingrese su contraseña"
+                            autocomplete="current-password"
+                            required
+                        >
+
+
+                        <!-- =========================================
+                             MOSTRAR / OCULTAR CONTRASEÑA
+                             ========================================= -->
+
+                        <button
+                            type="button"
+                            id="mostrarPassword"
+                            class="mostrar-password"
+                            aria-label="Mostrar contraseña"
+                            title="Mostrar contraseña"
+                        >
+
+                            <i
+                                class="fa-solid fa-toggle-off"
+                                aria-hidden="true"
+                            ></i>
+
+                        </button>
+
+
+                    </div>
+
+                </div>
+
+
+                <!-- =================================================
+                     BOTÓN INICIAR SESIÓN
+                     ================================================= -->
+
+                <button
+                    type="submit"
+                    class="btn-ingresar"
+                >
+
+                    Iniciar sesión
+
+                </button>
+
+
+            </form>
+
+
+            <!-- =================================================
+                 MENSAJE
+                 ================================================= -->
+
+            <p
+                id="mensaje"
+                class="mensaje"
+                aria-live="polite"
+            ></p>
+
+
+            <!-- =================================================
+                 PIE
+                 ================================================= -->
+
+            <div class="pie-acceso">
+
+                <span>
+                    Sistema de control empresarial
+                </span>
+
+                <strong>
+                    Kentro
+                </strong>
+
+            </div>
+
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="Acceso.js"></script>
+
+
+</body>
+
+</html>

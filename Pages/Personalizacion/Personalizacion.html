@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Kentro | Personalización</title>
+
+
+    <!-- =====================================================
+         FONT AWESOME
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    >
+
+
+    <!-- =====================================================
+         ESTILOS GENERALES
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="../../Shared/Css/Variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../Shared/Css/Global.css"
+    >
+
+
+    <!-- =====================================================
+         ESTILOS DE PERSONALIZACIÓN
+         ===================================================== -->
+
+    <link
+        rel="stylesheet"
+        href="Personalizacion.css"
+    >
+
+</head>
+
+
+<body>
+
+    <div class="personalizacion-app">
+
+
+        <!-- =====================================================
+             ENCABEZADO
+             ===================================================== -->
+
+        <header class="personalizacion-header">
+
+            <div class="header-left">
+
+                <button
+                    type="button"
+                    id="btnVolver"
+                    class="btn-volver"
+                    aria-label="Volver al panel principal"
+                    title="Volver al panel"
+                >
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                </button>
+
+
+                <div class="header-titles">
+
+                    <h1>
+                        Personalización
+                    </h1>
+
+                    <p>
+                        Configura la información e identidad visual de tu negocio.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="header-actions">
+
+                <button
+                    type="button"
+                    id="btnRestaurar"
+                    class="btn-secondary"
+                >
+
+                    <i class="fa-solid fa-arrow-rotate-left"></i>
+
+                    Restaurar Kentro
+
+                </button>
+
+
+                <button
+                    type="button"
+                    id="btnGuardar"
+                    class="btn-primary"
+                >
+
+                    <i class="fa-solid fa-floppy-disk"></i>
+
+                    Guardar cambios
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+
+        <!-- =====================================================
+             CONTENIDO
+             ===================================================== -->
+
+        <main class="personalizacion-content">
+
+
+            <!-- =================================================
+                 INFORMACIÓN DEL NEGOCIO
+                 ================================================= -->
+
+            <section class="config-card empresa-card">
+
+
+                <div class="card-header">
+
+                    <div class="card-icon">
+
+                        <i class="fa-solid fa-building"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h2>
+                            Información del negocio
+                        </h2>
+
+                        <p>
+                            Estos datos identificarán tu empresa dentro de Kentro.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="form-grid">
+
+
+                    <!-- ID EMPRESA -->
+
+                    <div class="form-group">
+
+                        <label for="idEmpresa">
+                            ID Empresa
+                        </label>
+
+                        <div class="input-icon">
+
+                            <i class="fa-solid fa-fingerprint"></i>
+
+                            <input
+                                type="text"
+                                id="idEmpresa"
+                                name="idEmpresa"
+                                value="KENTRO-000001"
+                                readonly
+                            >
+
+                        </div>
+
+                        <small>
+                            Este identificador es generado automáticamente por Kentro.
+                        </small>
+
+                    </div>
+
+
+                    <!-- NIT / CC -->
+
+                    <div class="form-group">
+
+                        <label for="nit">
+                            NIT / CC
+                        </label>
+
+                        <div class="input-icon">
+
+                            <i class="fa-solid fa-id-card"></i>
+
+                            <input
+                                type="text"
+                                id="nit"
+                                name="nit"
+                                placeholder="Ej: 900123456-1"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PROPIETARIO -->
+
+                    <div class="form-group">
+
+                        <label for="nombrePropietario">
+                            Nombre del propietario
+                        </label>
+
+                        <div class="input-icon">
+
+                            <i class="fa-solid fa-user-tie"></i>
+
+                            <input
+                                type="text"
+                                id="nombrePropietario"
+                                name="nombrePropietario"
+                                placeholder="Nombre completo"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EMPRESA -->
+
+                    <div class="form-group">
+
+                        <label for="nombreEmpresa">
+                            Nombre de la empresa
+                        </label>
+
+                        <div class="input-icon">
+
+                            <i class="fa-solid fa-store"></i>
+
+                            <input
+                                type="text"
+                                id="nombreEmpresa"
+                                name="nombreEmpresa"
+                                placeholder="Ej: Ferretería Central"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- TELÉFONO -->
+
+                    <div class="form-group">
+
+                        <label for="telefono">
+                            Teléfono
+                        </label>
+
+                        <div class="input-icon">
+
+                            <i class="fa-solid fa-phone"></i>
+
+                            <input
+                                type="tel"
+                                id="telefono"
+                                name="telefono"
+                                placeholder="Ej: 310 000 0000"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- CORREO -->
+
+                    <div class="form-group">
+
+                        <label for="correo">
+                            Correo
+                        </label>
+
+                        <div class="input-icon">
+
+                            <i class="fa-solid fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="correo"
+                                name="correo"
+                                placeholder="correo@empresa.com"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- DIRECCIÓN -->
+
+                    <div class="form-group form-group-full">
+
+                        <label for="direccion">
+                            Dirección
+                        </label>
+
+                        <div class="input-icon">
+
+                            <i class="fa-solid fa-location-dot"></i>
+
+                            <input
+                                type="text"
+                                id="direccion"
+                                name="direccion"
+                                placeholder="Dirección del negocio"
+                            >
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- LEMA -->
+
+                    <div class="form-group form-group-full">
+
+                        <label for="lema">
+                            Lema
+                        </label>
+
+                        <div class="input-icon">
+
+                            <i class="fa-solid fa-quote-left"></i>
+
+                            <input
+                                type="text"
+                                id="lema"
+                                name="lema"
+                                placeholder="Ej: Todo para construir mejor"
+                                maxlength="100"
+                            >
+
+                        </div>
+
+                        <small>
+                            Máximo 100 caracteres.
+                        </small>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CONFIGURACIÓN VISUAL
+                 ================================================= -->
+
+            <section class="personalizacion-grid">
+
+
+                <!-- =================================================
+                     LOGO
+                     ================================================= -->
+
+                <article class="config-card logo-card">
+
+
+                    <div class="card-header">
+
+                        <div class="card-icon">
+
+                            <i class="fa-solid fa-image"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h2>
+                                Logo del negocio
+                            </h2>
+
+                            <p>
+                                Personaliza la identidad visual de tu empresa.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="logo-upload-area">
+
+
+                        <!-- PREVISUALIZACIÓN -->
+
+                        <div
+                            class="logo-preview"
+                            id="logoPreview"
+                        >
+
+                            <div
+                                class="logo-placeholder"
+                                id="logoPlaceholder"
+                            >
+
+                                <i class="fa-solid fa-building"></i>
+
+                                <span>
+                                    Sin logo
+                                </span>
+
+                            </div>
+
+
+                            <img
+                                id="previewLogoImage"
+                                src=""
+                                alt="Vista previa del logo"
+                                hidden
+                            >
+
+                        </div>
+
+
+                        <!-- INPUT OCULTO -->
+
+                        <input
+                            type="file"
+                            id="inputLogo"
+                            accept="image/png,image/webp,image/jpeg"
+                            hidden
+                        >
+
+
+                        <!-- BOTONES -->
+
+                        <div class="logo-actions">
+
+                            <button
+                                type="button"
+                                id="btnSeleccionarLogo"
+                                class="btn-upload"
+                            >
+
+                                <i class="fa-solid fa-upload"></i>
+
+                                Seleccionar logo
+
+                            </button>
+
+
+                            <button
+                                type="button"
+                                id="btnEliminarLogo"
+                                class="btn-remove-logo"
+                                disabled
+                            >
+
+                                <i class="fa-solid fa-trash"></i>
+
+                                Eliminar
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- INFORMACIÓN -->
+
+                        <div class="logo-info">
+
+                            <div>
+
+                                <i class="fa-solid fa-expand"></i>
+
+                                <span>
+                                    Recomendado: 512 × 512 px
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="fa-solid fa-file-image"></i>
+
+                                <span>
+                                    PNG, JPG o WebP
+                                </span>
+
+                            </div>
+
+
+                            <div>
+
+                                <i class="fa-solid fa-weight-hanging"></i>
+
+                                <span>
+                                    Máximo 2 MB
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- =================================================
+                     APARIENCIA
+                     ================================================= -->
+
+                <article class="config-card apariencia-card">
+
+
+                    <div class="card-header">
+
+                        <div class="card-icon">
+
+                            <i class="fa-solid fa-palette"></i>
+
+                        </div>
+
+
+                        <div>
+
+                            <h2>
+                                Apariencia
+                            </h2>
+
+                            <p>
+                                Selecciona los colores que representarán tu negocio.
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =============================================
+                         PALETAS
+                         ============================================= -->
+
+                    <div class="apariencia-section">
+
+                        <div class="section-label">
+
+                            <span>
+                                Paletas prediseñadas
+                            </span>
+
+                            <small>
+                                Selecciona una combinación lista para usar.
+                            </small>
+
+                        </div>
+
+
+                        <div class="palette-grid">
+
+
+                            <!-- KENTRO -->
+
+                            <button
+                                type="button"
+                                class="palette-option active"
+                                data-theme="kentro"
+                                data-primary="#65D20B"
+                                data-hover="#54B90A"
+                                data-light="#8BEA16"
+                                data-soft="#EAFBDA"
+                            >
+
+                                <div class="palette-colors">
+
+                                    <span style="background:#65D20B;"></span>
+
+                                    <span style="background:#8BEA16;"></span>
+
+                                    <span style="background:#080C0A;"></span>
+
+                                </div>
+
+                                <strong>
+                                    Kentro
+                                </strong>
+
+                                <small>
+                                    Predeterminado
+                                </small>
+
+                                <i class="fa-solid fa-circle-check palette-check"></i>
+
+                            </button>
+
+
+                            <!-- AZUL -->
+
+                            <button
+                                type="button"
+                                class="palette-option"
+                                data-theme="azul"
+                                data-primary="#2563EB"
+                                data-hover="#1D4ED8"
+                                data-light="#60A5FA"
+                                data-soft="#DBEAFE"
+                            >
+
+                                <div class="palette-colors">
+
+                                    <span style="background:#2563EB;"></span>
+
+                                    <span style="background:#60A5FA;"></span>
+
+                                    <span style="background:#0F172A;"></span>
+
+                                </div>
+
+                                <strong>
+                                    Océano
+                                </strong>
+
+                                <small>
+                                    Profesional
+                                </small>
+
+                                <i class="fa-solid fa-circle-check palette-check"></i>
+
+                            </button>
+
+
+                            <!-- TURQUESA -->
+
+                            <button
+                                type="button"
+                                class="palette-option"
+                                data-theme="turquesa"
+                                data-primary="#0D9488"
+                                data-hover="#0F766E"
+                                data-light="#2DD4BF"
+                                data-soft="#CCFBF1"
+                            >
+
+                                <div class="palette-colors">
+
+                                    <span style="background:#0D9488;"></span>
+
+                                    <span style="background:#2DD4BF;"></span>
+
+                                    <span style="background:#134E4A;"></span>
+
+                                </div>
+
+                                <strong>
+                                    Turquesa
+                                </strong>
+
+                                <small>
+                                    Fresco
+                                </small>
+
+                                <i class="fa-solid fa-circle-check palette-check"></i>
+
+                            </button>
+
+
+                            <!-- VIOLETA -->
+
+                            <button
+                                type="button"
+                                class="palette-option"
+                                data-theme="violeta"
+                                data-primary="#7C3AED"
+                                data-hover="#6D28D9"
+                                data-light="#A78BFA"
+                                data-soft="#EDE9FE"
+                            >
+
+                                <div class="palette-colors">
+
+                                    <span style="background:#7C3AED;"></span>
+
+                                    <span style="background:#A78BFA;"></span>
+
+                                    <span style="background:#2E1065;"></span>
+
+                                </div>
+
+                                <strong>
+                                    Violeta
+                                </strong>
+
+                                <small>
+                                    Creativo
+                                </small>
+
+                                <i class="fa-solid fa-circle-check palette-check"></i>
+
+                            </button>
+
+
+                            <!-- NARANJA -->
+
+                            <button
+                                type="button"
+                                class="palette-option"
+                                data-theme="naranja"
+                                data-primary="#EA580C"
+                                data-hover="#C2410C"
+                                data-light="#FB923C"
+                                data-soft="#FFEDD5"
+                            >
+
+                                <div class="palette-colors">
+
+                                    <span style="background:#EA580C;"></span>
+
+                                    <span style="background:#FB923C;"></span>
+
+                                    <span style="background:#431407;"></span>
+
+                                </div>
+
+                                <strong>
+                                    Naranja
+                                </strong>
+
+                                <small>
+                                    Enérgico
+                                </small>
+
+                                <i class="fa-solid fa-circle-check palette-check"></i>
+
+                            </button>
+
+
+                            <!-- ROJO -->
+
+                            <button
+                                type="button"
+                                class="palette-option"
+                                data-theme="rojo"
+                                data-primary="#E11D48"
+                                data-hover="#BE123C"
+                                data-light="#FB7185"
+                                data-soft="#FFE4E6"
+                            >
+
+                                <div class="palette-colors">
+
+                                    <span style="background:#E11D48;"></span>
+
+                                    <span style="background:#FB7185;"></span>
+
+                                    <span style="background:#4C0519;"></span>
+
+                                </div>
+
+                                <strong>
+                                    Carmesí
+                                </strong>
+
+                                <small>
+                                    Intenso
+                                </small>
+
+                                <i class="fa-solid fa-circle-check palette-check"></i>
+
+                            </button>
+
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- =============================================
+                         PERSONALIZADO
+                         ============================================= -->
+
+                    <div class="apariencia-section custom-color-section">
+
+                        <div class="section-label">
+
+                            <span>
+                                Color personalizado
+                            </span>
+
+                            <small>
+                                Selecciona tu propio color principal.
+                            </small>
+
+                        </div>
+
+
+                        <div class="custom-color-row">
+
+
+                            <label
+                                class="color-picker-wrapper"
+                                for="colorPersonalizado"
+                            >
+
+                                <input
+                                    type="color"
+                                    id="colorPersonalizado"
+                                    value="#65D20B"
+                                >
+
+                                <span
+                                    class="color-picker-preview"
+                                    id="colorPreviewBox"
+                                ></span>
+
+                            </label>
+
+
+                            <div class="hex-field">
+
+                                <span>
+                                    #
+                                </span>
+
+                                <input
+                                    type="text"
+                                    id="colorHex"
+                                    value="65D20B"
+                                    maxlength="6"
+                                    autocomplete="off"
+                                >
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                id="btnAplicarColor"
+                                class="btn-apply-color"
+                            >
+
+                                Aplicar
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                </article>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 VISTA PREVIA
+                 ================================================= -->
+
+            <section class="config-card preview-card">
+
+
+                <div class="card-header">
+
+                    <div class="card-icon">
+
+                        <i class="fa-solid fa-eye"></i>
+
+                    </div>
+
+
+                    <div>
+
+                        <h2>
+                            Vista previa
+                        </h2>
+
+                        <p>
+                            Visualiza cómo se verá la identidad de tu negocio en Kentro.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="software-preview">
+
+
+                    <!-- SIDEBAR PREVIEW -->
+
+                    <aside class="preview-sidebar">
+
+
+                        <div class="preview-company">
+
+
+                            <div
+                                class="preview-company-logo"
+                                id="previewCompanyLogo"
+                            >
+
+                                <span id="previewCompanyInitial">
+                                    N
+                                </span>
+
+
+                                <img
+                                    id="previewCompanyImage"
+                                    src=""
+                                    alt="Logo de empresa"
+                                    hidden
+                                >
+
+                            </div>
+
+
+                            <div class="preview-company-data">
+
+                                <strong id="previewCompanyName">
+                                    Negocio Demo
+                                </strong>
+
+                                <span>
+                                    Administrador
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <nav class="preview-nav">
+
+                            <div class="preview-nav-item active">
+
+                                <i class="fa-solid fa-house"></i>
+
+                                <span>
+                                    Inicio
+                                </span>
+
+                            </div>
+
+
+                            <div class="preview-nav-item">
+
+                                <i class="fa-solid fa-cart-shopping"></i>
+
+                                <span>
+                                    Ventas
+                                </span>
+
+                            </div>
+
+
+                            <div class="preview-nav-item">
+
+                                <i class="fa-solid fa-boxes-stacked"></i>
+
+                                <span>
+                                    Inventario
+                                </span>
+
+                            </div>
+
+
+                            <div class="preview-nav-item">
+
+                                <i class="fa-solid fa-users"></i>
+
+                                <span>
+                                    Clientes
+                                </span>
+
+                            </div>
+
+                        </nav>
+
+                    </aside>
+
+
+
+                    <!-- CONTENIDO PREVIEW -->
+
+                    <div class="preview-content">
+
+
+                        <div class="preview-top">
+
+                            <div>
+
+                                <strong>
+                                    Panel principal
+                                </strong>
+
+                                <span id="previewBusinessLema">
+                                    Controla tu negocio con Kentro
+                                </span>
+
+                            </div>
+
+
+                            <button
+                                type="button"
+                                tabindex="-1"
+                            >
+
+                                + Nueva venta
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="preview-cards">
+
+
+                            <div class="preview-stat">
+
+                                <div class="preview-stat-icon">
+
+                                    <i class="fa-solid fa-cart-shopping"></i>
+
+                                </div>
+
+                                <span>
+                                    Ventas del día
+                                </span>
+
+                                <strong>
+                                    $1.850.000
+                                </strong>
+
+                            </div>
+
+
+                            <div class="preview-stat">
+
+                                <div class="preview-stat-icon">
+
+                                    <i class="fa-solid fa-box"></i>
+
+                                </div>
+
+                                <span>
+                                    Inventario
+                                </span>
+
+                                <strong>
+                                    1.248
+                                </strong>
+
+                            </div>
+
+
+                            <div class="preview-stat">
+
+                                <div class="preview-stat-icon">
+
+                                    <i class="fa-solid fa-users"></i>
+
+                                </div>
+
+                                <span>
+                                    Clientes
+                                </span>
+
+                                <strong>
+                                    286
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 ACCIONES INFERIORES
+                 ================================================= -->
+
+            <footer class="personalizacion-footer">
+
+
+                <div class="footer-info">
+
+                    <i class="fa-solid fa-circle-info"></i>
+
+                    <span>
+                        Los cambios de identidad se aplicarán a todas las interfaces compatibles de Kentro.
+                    </span>
+
+                </div>
+
+
+                <div class="footer-actions">
+
+                    <button
+                        type="button"
+                        id="btnRestaurarFooter"
+                        class="btn-secondary"
+                    >
+
+                        <i class="fa-solid fa-arrow-rotate-left"></i>
+
+                        Restaurar colores
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        id="btnGuardarFooter"
+                        class="btn-primary"
+                    >
+
+                        <i class="fa-solid fa-floppy-disk"></i>
+
+                        Guardar cambios
+
+                    </button>
+
+                </div>
+
+            </footer>
+
+
+        </main>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         MENSAJE TOAST
+         ===================================================== -->
+
+    <div
+        id="toastPersonalizacion"
+        class="toast-personalizacion"
+        aria-live="polite"
+    >
+
+        Cambios guardados correctamente.
+
+    </div>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         ===================================================== -->
+
+    <script src="Personalizacion.js"></script>
+
+</body>
+
+</html>
