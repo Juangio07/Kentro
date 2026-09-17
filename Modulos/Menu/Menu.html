@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Kentro | Panel empresarial</title>
+
+    <!-- Estilos generales -->
+
+    <!-- Font Awesome -->
+    <link
+        rel="stylesheet"
+        href="../../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../Shared/Css/Variables.css"
+    >
+
+    <link
+        rel="stylesheet"
+        href="../../Shared/Css/Global.css"
+    >
+
+    <!-- Estilos del menú -->
+
+    <link
+        rel="stylesheet"
+        href="Menu.css"
+    >
+    <script defer src="../../Shared/Config/AppConfig.js"></script>
+    <script defer src="../../Shared/Config/FixelarGlobal.js"></script>
+
+</head>
+
+<body>
+
+<div class="Kentro">
+
+    <!-- =====================================================
+         SIDEBAR
+         ===================================================== -->
+
+    <aside
+        class="sidebar"
+        id="sidebar"
+    >
+
+        <!-- Logo -->
+
+        <div class="sidebar-logo">
+
+
+    <!-- Logo completo cuando el sidebar está abierto -->
+
+    <div class="logo-completo logo-Kentro-dinamico">
+        <img
+            src="../../Assets/Logos/ImagotipoClaro.png"
+            alt="Kentro"
+            class="Kentro-imagotipo"
+        >
+
+
+    </div>
+
+
+    <!-- Solo K cuando el sidebar está contraído -->
+
+    <div class="logo-mini">
+
+        <img
+            src="../../Assets/Logos/Logo.png"
+            alt="Kentro"
+            class="Kentro-logo-mini"
+        >
+
+    </div>
+
+
+</div>
+
+        <!-- Navegación -->
+
+        <nav class="sidebar-nav">
+
+            <p class="nav-title">
+                PRINCIPAL
+            </p>
+
+            <button
+            class="nav-item active"
+            data-section="Inicio"
+>
+
+            <span class="nav-icon">
+            <i class="fa-solid fa-house"></i>
+            </span>
+
+            <span class="nav-text">
+            Inicio
+            </span>
+            
+            </button>
+
+
+            <p class="nav-title">
+                CONTROL
+            </p>
+
+
+            <button
+                class="nav-item"
+                data-section="Productos"
+            >
+
+                <span class="nav-icon">
+                <i class="fa-solid fa-box-open"></i>
+                </span>
+
+                <span class="nav-text">
+                    Productos
+                </span>
+
+            </button>
+
+
+            <p class="nav-title">
+                ADMINISTRACIÓN
+            </p>
+
+
+            <button
+                class="nav-item"
+                data-section="Estadísticas"
+            >
+
+                <span class="nav-icon">
+                <i class="fa-solid fa-chart-simple"></i>
+                </span>
+
+                <span class="nav-text">
+                    Estadísticas
+                </span>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                data-section="Usuarios"
+            >
+
+                <span class="nav-icon">
+                <i class="fa-solid fa-users"></i>
+                </span>
+
+                <span class="nav-text">
+                    Usuarios
+                </span>
+
+            </button>
+
+            <button
+                class="nav-item"
+                data-section="Roles"
+            >
+
+                <span class="nav-icon">
+                <i class="fa-solid fa-lock"></i>
+                </span>
+
+                <span class="nav-text">
+                    Roles
+                </span>
+
+            </button>
+
+            <button class="nav-item" data-section="Auditoría">
+                <span class="nav-icon"> <i class="fa-solid fa-fingerprint"></i> </span>
+                <span class="nav-text">Auditoría</span>
+            </button>
+
+            <button class="nav-item" data-section="Membresía">
+                <span class="nav-icon"><i class="fa-solid fa-id-card"></i></span>
+                <span class="nav-text">Membresía</span>
+            </button>
+
+            <button class="nav-item" data-section="Configuración">
+                <span class="nav-icon"><i class="fa-solid fa-gear"></i></span>
+                <span class="nav-text">Configuración</span>
+            </button>
+
+        </nav>
+
+
+        <!-- =====================================================
+     EMPRESA / NEGOCIO
+     ===================================================== -->
+
+<div class="sidebar-footer">
+
+    <div class="empresa-mini">
+
+        <div
+            class="empresa-avatar"
+            id="empresaAvatarMenu"
+        >
+
+            <!-- Inicial si no existe logo -->
+
+            <span id="inicialNegocioMenu">
+                N
+            </span>
+
+
+            <!-- Logo si existe -->
+
+            <img
+                id="logoNegocioMenu"
+                alt=""
+                hidden
+            >
+
+        </div>
+
+
+        <div class="empresa-info">
+
+            <strong id="nombreNegocioMenu">
+                Negocio Demo
+            </strong>
+
+            <span>
+                Administrador
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+ 
+
+    </aside>
+
+
+    <!-- =====================================================
+         CONTENIDO PRINCIPAL
+         ===================================================== -->
+
+    <main class="main-content">
+
+
+        <!-- =================================================
+             TOPBAR
+             ================================================= -->
+
+        <header class="topbar">
+
+            <div class="topbar-left">
+
+                <button
+                    class="btn-sidebar"
+                    id="btnSidebar"
+                    aria-label="Contraer menú"
+                >
+                <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <div>
+
+                    <h1>
+                        Panel principal
+                    </h1>
+
+                    <p id="fechaActual">
+                        Resumen general de tu negocio
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="topbar-right">
+
+                <!-- Buscar -->
+
+                <div class="search-box">
+
+                    <span>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    </span>
+
+                    <input
+                        type="text"
+                        id="buscador"
+                        placeholder="Buscar en Kentro..."
+                    >
+
+                </div>
+
+
+                <!-- Notificaciones -->
+
+                <button
+                    class="topbar-button"
+                    id="btnNotificaciones"
+                    aria-label="Notificaciones"
+                >
+
+                <i class="fa-solid fa-bell"></i>
+
+                    <span class="notification-dot">
+                        3
+                    </span>
+
+                </button>
+
+
+                <!-- Usuario -->
+
+                <button
+                    class="user-button"
+                    id="btnUsuario"
+                >
+
+                    <div class="user-avatar">
+                        A
+                    </div>
+
+                    <div class="user-data">
+
+                        <strong>
+                            Administrador
+                        </strong>
+
+                        <span>
+                            Kentro · By Fixelar
+                        </span>
+
+                    </div>
+
+                    <span class="arrow">
+                        ▾
+                    </span>
+
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- =================================================
+             CONTENIDO
+             ================================================= -->
+
+        <section class="dashboard">
+
+
+            <!-- Saludo -->
+
+            <div class="dashboard-heading">
+
+                <div>
+
+                    <h2 id="saludo">
+                        Buenos días
+                    </h2>
+
+                    <p>
+                        Aquí tienes un resumen de lo que está pasando en tu negocio.
+                    </p>
+
+                </div>
+
+
+                <button
+                    class="btn-primary"
+                    data-action="venta"
+                >
+                    + Nueva venta
+                </button>
+
+            </div>
+
+
+            <!-- =================================================
+                 KPIs
+                 ================================================= -->
+
+            <section class="stats-grid">
+
+                <article class="stat-card">
+
+                    <div class="stat-header">
+
+                        <div class="stat-icon prim">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+
+                        <span>
+                            Ventas del día
+                        </span>
+
+                    </div>
+
+                    <strong class="stat-value">
+                        $1.850.000
+                    </strong>
+
+                    <div class="stat-footer positive">
+
+                        ↑ 12.4%
+
+                        <span>
+                            frente a ayer
+                        </span>
+
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-header">
+
+                        <div class="stat-icon segu">
+                        <i class="fa-solid fa-truck"></i>
+                        </div>
+
+                        <span>
+                            Inventario
+                        </span>
+
+                    </div>
+
+                    <strong class="stat-value">
+                        $18.420.000
+                    </strong>
+
+                    <div class="stat-footer">
+
+                        1.248 productos
+
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-header">
+
+                        <div class="stat-icon terc">
+                        <i class="fa-solid fa-wallet"></i>
+                        </div>
+
+                        <span>
+                            Gastos del mes
+                        </span>
+
+                    </div>
+
+                    <strong class="stat-value">
+                        $2.485.000
+                    </strong>
+
+                    <div class="stat-footer">
+
+                        36 movimientos
+
+                    </div>
+
+                </article>
+
+
+                <article class="stat-card">
+
+                    <div class="stat-header">
+
+                        <div class="stat-icon cuar">
+                        <i class="fa-solid fa-credit-card"></i>
+                        </div>
+
+                        <span>
+                            Créditos pendientes
+                        </span>
+
+                    </div>
+
+                    <strong class="stat-value">
+                        $3.280.000
+                    </strong>
+
+                    <div class="stat-footer warning">
+
+                        8 clientes pendientes
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =================================================
+                 ACCESOS RÁPIDOS
+                 ================================================= -->
+
+            <section class="section-card">
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h3>
+                            Accesos rápidos
+                        </h3>
+
+                        <p>
+                            Operaciones frecuentes
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="quick-grid">
+
+                    <button
+                        class="quick-action"
+                        data-action="venta"
+                    >
+
+                        <span class="quick-icon">
+                        <i class="fa-solid fa-cart-plus"></i>
+                        </span>
+
+                        <span>
+
+                            <strong>
+                                Nueva venta
+                            </strong>
+
+                            <small>
+                                Registrar una venta
+                            </small>
+
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="quick-action"
+                        data-action="producto"
+                    >
+
+                        <span class="quick-icon">
+                        <i class="fa-solid fa-square-plus"></i>
+                        </span>
+
+                        <span>
+
+                            <strong>
+                                Nuevo producto
+                            </strong>
+
+                            <small>
+                                Agregar artículo
+                            </small>
+
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="quick-action"
+                        data-action="inversion"
+                    >
+
+                        <span class="quick-icon">
+                        <i class="fa-solid fa-money-bill-trend-up"></i>
+                        </span>
+
+                        <span>
+
+                            <strong>
+                                Registrar inversión
+                            </strong>
+
+                            <small>
+                                Entrada de mercancía
+                            </small>
+
+                        </span>
+
+                    </button>
+
+
+                    <button
+                        class="quick-action"
+                        data-action="gasto"
+                    >
+
+                        <span class="quick-icon">
+                        <i class="fa-solid fa-filter-circle-dollar"></i>
+                        </span>
+
+                        <span>
+
+                            <strong>
+                                Nuevo gasto
+                            </strong>
+
+                            <small>
+                                Registrar egreso
+                            </small>
+
+                        </span>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- =================================================
+                 GRID PRINCIPAL
+                 ================================================= -->
+
+            <section class="dashboard-grid">
+
+
+                <!-- Ventas -->
+
+                <article class="panel sales-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h3>
+                                Ventas últimos 7 días
+                            </h3>
+
+                            <p>
+                                Comportamiento semanal
+                            </p>
+
+                        </div>
+
+                        <select id="rangoGrafica">
+
+                            <option value="7">
+                                7 días
+                            </option>
+
+                            <option value="30">
+                                30 días
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="chart">
+
+                        <div class="chart-line">
+                            <span>$2M</span>
+                        </div>
+
+                        <div class="chart-line">
+                            <span>$1.5M</span>
+                        </div>
+
+                        <div class="chart-line">
+                            <span>$1M</span>
+                        </div>
+
+                        <div class="chart-line">
+                            <span>$500K</span>
+                        </div>
+
+
+                        <div class="bars">
+
+                            <div class="bar-group">
+
+                                <div
+                                    class="bar"
+                                    style="height: 45%;"
+                                ></div>
+
+                                <span>
+                                    Lun
+                                </span>
+
+                            </div>
+
+
+                            <div class="bar-group">
+
+                                <div
+                                    class="bar"
+                                    style="height: 62%;"
+                                ></div>
+
+                                <span>
+                                    Mar
+                                </span>
+
+                            </div>
+
+
+                            <div class="bar-group">
+
+                                <div
+                                    class="bar"
+                                    style="height: 50%;"
+                                ></div>
+
+                                <span>
+                                    Mié
+                                </span>
+
+                            </div>
+
+
+                            <div class="bar-group">
+
+                                <div
+                                    class="bar"
+                                    style="height: 76%;"
+                                ></div>
+
+                                <span>
+                                    Jue
+                                </span>
+
+                            </div>
+
+
+                            <div class="bar-group">
+
+                                <div
+                                    class="bar"
+                                    style="height: 66%;"
+                                ></div>
+
+                                <span>
+                                    Vie
+                                </span>
+
+                            </div>
+
+
+                            <div class="bar-group">
+
+                                <div
+                                    class="bar"
+                                    style="height: 88%;"
+                                ></div>
+
+                                <span>
+                                    Sáb
+                                </span>
+
+                            </div>
+
+
+                            <div class="bar-group">
+
+                                <div
+                                    class="bar active"
+                                    style="height: 95%;"
+                                ></div>
+
+                                <span>
+                                    Hoy
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+
+                <!-- Alertas -->
+
+                <article class="panel alerts-panel">
+
+                    <div class="panel-header">
+
+                        <div>
+
+                            <h3>
+                                Alertas de inventario
+                            </h3>
+
+                            <p>
+                                Productos que necesitan atención
+                            </p>
+
+                        </div>
+
+                        <button class="text-button">
+                            Ver todos
+                        </button>
+
+                    </div>
+
+
+                    <div class="alert-list">
+
+                        <div
+                            class="stock-item searchable"
+                            data-search="Toner HP bajo stock"
+                        >
+
+                            <div class="stock-image">
+                                T
+                            </div>
+
+                            <div class="stock-info">
+
+                                <strong>
+                                    Toner HP 85A
+                                </strong>
+
+                                <span>
+                                    Stock actual: 3
+                                </span>
+
+                            </div>
+
+                            <div class="stock-status danger">
+                                Bajo
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="stock-item searchable"
+                            data-search="Papel carta bajo stock"
+                        >
+
+                            <div class="stock-image">
+                                P
+                            </div>
+
+                            <div class="stock-info">
+
+                                <strong>
+                                    Papel carta x500
+                                </strong>
+
+                                <span>
+                                    Stock actual: 6
+                                </span>
+
+                            </div>
+
+                            <div class="stock-status warning">
+                                Bajo
+                            </div>
+
+                        </div>
+
+
+                        <div
+                            class="stock-item searchable"
+                            data-search="Cable HDMI agotado"
+                        >
+
+                            <div class="stock-image">
+                                C
+                            </div>
+
+                            <div class="stock-info">
+
+                                <strong>
+                                    Cable HDMI 2M
+                                </strong>
+
+                                <span>
+                                    Stock actual: 0
+                                </span>
+
+                            </div>
+
+                            <div class="stock-status danger">
+                                Agotado
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </article>
+
+            </section>
+
+
+            <!-- =================================================
+                 FACTURAS RECIENTES
+                 ================================================= -->
+
+            <section class="panel invoices-panel">
+
+                <div class="panel-header">
+
+                    <div>
+
+                        <h3>
+                            Facturas recientes
+                        </h3>
+
+                        <p>
+                            Últimas operaciones realizadas
+                        </p>
+
+                    </div>
+
+                    <button class="text-button">
+                        Ver facturas
+                    </button>
+
+                </div>
+
+
+                <div class="table-wrKentroer">
+
+                    <table>
+
+                        <thead>
+
+                        <tr>
+
+                            <th>
+                                Factura
+                            </th>
+
+                            <th>
+                                Cliente
+                            </th>
+
+                            <th>
+                                Fecha
+                            </th>
+
+                            <th>
+                                Total
+                            </th>
+
+                            <th>
+                                Estado
+                            </th>
+
+                        </tr>
+
+                        </thead>
+
+
+                        <tbody>
+
+                        <tr
+                            class="searchable"
+                            data-search="FV-00128 Comercial del Norte Pagada"
+                        >
+
+                            <td class="invoice-code">
+                                FV-00128
+                            </td>
+
+                            <td>
+                                Comercial del Norte
+                            </td>
+
+                            <td>
+                                Hoy, 10:32 a.m.
+                            </td>
+
+                            <td>
+                                $850.000
+                            </td>
+
+                            <td>
+
+                                <span class="badge success">
+                                    Pagada
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr
+                            class="searchable"
+                            data-search="FV-00127 Juan Pérez Crédito"
+                        >
+
+                            <td class="invoice-code">
+                                FV-00127
+                            </td>
+
+                            <td>
+                                Juan Pérez
+                            </td>
+
+                            <td>
+                                Hoy, 9:18 a.m.
+                            </td>
+
+                            <td>
+                                $420.000
+                            </td>
+
+                            <td>
+
+                                <span class="badge credit">
+                                    Crédito
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr
+                            class="searchable"
+                            data-search="FV-00126 Distribuciones SAS Pagada"
+                        >
+
+                            <td class="invoice-code">
+                                FV-00126
+                            </td>
+
+                            <td>
+                                Distribuciones SAS
+                            </td>
+
+                            <td>
+                                Ayer, 5:46 p.m.
+                            </td>
+
+                            <td>
+                                $1.250.000
+                            </td>
+
+                            <td>
+
+                                <span class="badge success">
+                                    Pagada
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+
+                        <tr
+                            class="searchable"
+                            data-search="FV-00125 María González Pendiente"
+                        >
+
+                            <td class="invoice-code">
+                                FV-00125
+                            </td>
+
+                            <td>
+                                María González
+                            </td>
+
+                            <td>
+                                Ayer, 3:15 p.m.
+                            </td>
+
+                            <td>
+                                $185.000
+                            </td>
+
+                            <td>
+
+                                <span class="badge pending">
+                                    Pendiente
+                                </span>
+
+                            </td>
+
+                        </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<!-- =========================================================
+     MENSAJE / TOAST
+     ========================================================= -->
+
+<div
+    class="toast"
+    id="toast"
+>
+    Módulo en construcción
+</div>
+
+
+<script src="Menu.js"></script>
+
+</body>
+
+</html>

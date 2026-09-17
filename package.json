@@ -1,21 +1,12 @@
 {
-  "name": "kentro-platform",
+  "name": "FixelarBase-platform",
   "version": "0.1.0",
   "private": true,
-  "description": "Plataforma Kentro: Desktop, API, web, admin y migraciones.",
-  "workspaces": [
-    "apps/*",
-    "services/*",
-    "packages/*",
-    "./kentro-migrations"
-  ],
+  "description": "FixelarBase, aplicación de gestión empresarial desarrollada por Fixelar.",
+  "main": "Electron/main.js",
   "scripts": {
-    "start": "npm --workspace apps/kentro-desktop run start",
-    "lint": "npm run lint --workspaces --if-present",
-    "test": "npm run test --workspaces --if-present",
-    "desktop:start": "npm --workspace apps/kentro-desktop run start",
-    "api:dev": "npm --workspace services/kentro-api run dev",
-    "db:migrate": "npm --workspace kentro-migrations run migrate"
+    "start": "electron .",
+    "test": "node --check Electron/main.js && node --check Electron/preload.js && node --check Shared/Config/AppConfig.js && node --check Shared/Config/FixelarGlobal.js && node --check Modulos/Acceso/Acceso.js && node --check Modulos/Menu/Menu.js"
   },
   "engines": {
     "node": ">=20.0.0"

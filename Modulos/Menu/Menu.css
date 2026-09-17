@@ -1,0 +1,2181 @@
+/* ============================================================
+   Kentro
+   DASHBOARD / MENÚ PRINCIPAL
+   ============================================================ */
+
+
+/* ============================================================
+   BASE
+   ============================================================ */
+
+body {
+
+    margin: 0;
+
+    background:
+        var(--background-main);
+
+    color:
+        var(--text-primary);
+
+    overflow: hidden;
+}
+
+
+button,
+input,
+select {
+
+    font-family: inherit;
+}
+
+
+.Kentro {
+
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    background:
+        var(--background-main);
+
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+.sidebar {
+
+    width:
+        var(--sidebar-width);
+
+    height: 100vh;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--surface-dark) 0%,
+            var(--surface-graphite) 100%
+        );
+
+    border-right:
+        1px solid var(--border-sidebar);
+
+    transition:
+        width var(--transition-normal);
+
+    overflow: hidden;
+}
+
+
+.sidebar.collapsed {
+
+    width:
+        var(--sidebar-width-collapsed);
+}
+
+
+/* ============================================================
+   LOGO SIDEBAR
+   ============================================================ */
+
+.sidebar-logo {
+
+    min-height: 82px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: flex-start;
+
+    padding:
+        0 23px;
+
+    border-bottom:
+        1px solid var(--border-sidebar);
+
+    overflow: hidden;
+
+    transition:
+        padding var(--transition-normal);
+}
+
+
+/* ============================================================
+   LOGO COMPLETO
+   ============================================================ */
+
+.logo-Kentro-dinamico {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    white-space: nowrap;
+}
+
+
+/* ============================================================
+   K DINÁMICA
+   ============================================================ */
+
+.Kentro-k {
+
+    display: block;
+
+    flex-shrink: 0;
+
+
+    /* COLOR SEGÚN PERSONALIZACIÓN */
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--brand-primary-light) 0%,
+            var(--brand-primary) 52%,
+            var(--brand-primary-hover) 100%
+        );
+
+
+    /* FORMA ORIGINAL DE LA K */
+
+    -webkit-mask-image:
+        url("../../Assets/Logos/Logo.png");
+
+    -webkit-mask-repeat:
+        no-repeat;
+
+    -webkit-mask-position:
+        center;
+
+    -webkit-mask-size:
+        contain;
+
+
+    mask-image:
+        url("../../Assets/Logos/Logo.png");
+
+    mask-repeat:
+        no-repeat;
+
+    mask-position:
+        center;
+
+    mask-size:
+        contain;
+}
+
+
+/* K cuando el menú está abierto */
+
+.Kentro-k-grande {
+
+    width: 34px;
+    height: 34px;
+}
+
+
+/* ============================================================
+   PALABRA Kentro BLANCA
+   ============================================================ */
+
+.Kentro-logotipo-blanco {
+
+    width: 92px;
+
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+
+    object-position: left center;
+}
+
+
+/* ============================================================
+   LOGO MINI
+   ============================================================ */
+
+.logo-mini {
+
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.Kentro-k-mini {
+
+    width: 40px;
+    height: 40px;
+}
+
+
+/* ============================================================
+   SIDEBAR CONTRAÍDO
+   ============================================================ */
+
+.sidebar.collapsed .sidebar-logo {
+
+    padding: 0;
+
+    justify-content: center;
+}
+
+
+.sidebar.collapsed .logo-completo {
+
+    display: none;
+}
+
+
+.sidebar.collapsed .logo-mini {
+
+    display: flex;
+}
+
+
+/* ============================================================
+   NAVEGACIÓN SIDEBAR
+   ============================================================ */
+
+.sidebar-nav {
+
+    flex: 1 1 auto;
+
+    min-height: 0;
+
+    padding:
+        18px
+        13px
+        30px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    overscroll-behavior: contain;
+
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+}
+
+
+.sidebar-nav::-webkit-scrollbar {
+
+    width: 0;
+    height: 0;
+
+    display: none;
+}
+
+
+/* ============================================================
+   TÍTULOS DEL MENÚ
+   ============================================================ */
+
+.nav-title {
+
+    margin:
+        18px
+        12px
+        8px;
+
+    color:
+        #59615C;
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+.sidebar.collapsed .nav-title {
+
+    opacity: 0;
+
+    height: 0;
+
+    margin:
+        10px 0 5px;
+
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   OPCIONES DEL MENÚ
+   ============================================================ */
+
+.nav-item {
+
+    width: 100%;
+
+    min-height: 45px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    margin-bottom: 4px;
+
+    padding:
+        0 13px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        transparent;
+
+    color:
+        var(--text-sidebar);
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        background var(--transition-fast),
+        color var(--transition-fast),
+        padding var(--transition-normal);
+}
+
+
+.nav-item:hover {
+
+    background:
+        color-mix(
+            in srgb,
+            var(--brand-primary) 8%,
+            transparent
+        );
+
+    color:
+        var(--text-white);
+}
+
+
+.nav-item.active {
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--brand-primary),
+            var(--brand-primary-light)
+        );
+
+    color:
+        var(--brand-on-primary);
+}
+
+
+/* Menú contraído */
+
+.sidebar.collapsed .nav-item {
+
+    justify-content: center;
+
+    padding: 0;
+
+    gap: 0;
+}
+
+
+/* ============================================================
+   ICONOS DEL MENÚ
+   ============================================================ */
+
+.nav-icon {
+
+    width: 25px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    font-size: 17px;
+}
+
+
+.nav-icon i {
+
+    width: 100%;
+
+    text-align: center;
+}
+
+
+.nav-text {
+
+    white-space: nowrap;
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+.sidebar.collapsed .nav-text {
+
+    display: none;
+}
+
+
+/* ============================================================
+   FOOTER DEL SIDEBAR
+   ============================================================ */
+
+.sidebar-footer {
+
+    flex-shrink: 0;
+
+    padding: 15px;
+
+    background:
+        var(--surface-dark);
+
+    border-top:
+        1px solid var(--border-sidebar);
+}
+
+
+.empresa-mini {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    min-width: 0;
+}
+
+
+.sidebar.collapsed .empresa-mini {
+
+    justify-content: center;
+}
+
+
+/* ============================================================
+   AVATAR / LOGO EMPRESA
+   ============================================================ */
+
+.empresa-avatar {
+
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    border-radius: 10px;
+
+    background:
+        color-mix(
+            in srgb,
+            var(--brand-primary) 13%,
+            transparent
+        );
+
+    border:
+        1px solid
+        color-mix(
+            in srgb,
+            var(--brand-primary) 30%,
+            transparent
+        );
+
+    color:
+        var(--brand-primary-light);
+
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+/* Inicial */
+
+#inicialNegocioMenu {
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    color:
+        var(--brand-primary-light);
+}
+
+
+/* Logo */
+
+#logoNegocioMenu {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    object-position: center;
+
+    background:
+        #FFFFFF;
+}
+
+
+/* MUY IMPORTANTE:
+   Si no existe logo no se muestra el <img>
+*/
+
+#logoNegocioMenu[hidden] {
+
+    display: none !important;
+}
+
+
+.empresa-info {
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.empresa-info strong {
+
+    max-width: 145px;
+
+    overflow: hidden;
+
+    color:
+        var(--text-white);
+
+    font-size: 12px;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+.empresa-info span {
+
+    margin-top: 3px;
+
+    color:
+        #657069;
+
+    font-size: 10px;
+}
+
+
+.sidebar.collapsed .empresa-info {
+
+    display: none;
+}
+
+
+/* ============================================================
+   CONTENIDO PRINCIPAL
+   ============================================================ */
+
+.main-content {
+
+    flex: 1;
+
+    min-width: 0;
+    min-height: 0;
+
+    height: 100vh;
+
+    display: flex;
+
+    flex-direction: column;
+
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   TOPBAR
+   ============================================================ */
+
+.topbar {
+
+    height:
+        var(--topbar-height);
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding:
+        0 28px;
+
+    background:
+        rgba(255, 255, 255, 0.96);
+
+    border-bottom:
+        1px solid var(--border-color);
+}
+
+
+.topbar-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 16px;
+
+    min-width: 0;
+}
+
+
+.topbar-left h1 {
+
+    margin: 0;
+
+    color:
+        var(--text-primary);
+
+    font-size: 20px;
+
+    white-space: nowrap;
+}
+
+
+.topbar-left p {
+
+    margin:
+        4px
+        0
+        0;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 11px;
+
+    white-space: nowrap;
+}
+
+
+/* ============================================================
+   BOTÓN SIDEBAR
+   ============================================================ */
+
+.btn-sidebar {
+
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    border:
+        1px solid var(--border-color);
+
+    border-radius: 9px;
+
+    background:
+        var(--background-card);
+
+    color:
+        var(--text-primary);
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition-fast),
+        border-color var(--transition-fast),
+        color var(--transition-fast);
+}
+
+
+.btn-sidebar:hover {
+
+    background:
+        var(--brand-primary-soft);
+
+    border-color:
+        var(--brand-primary);
+
+    color:
+        var(--brand-primary-hover);
+}
+
+
+.topbar-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+/* ============================================================
+   BUSCADOR
+   ============================================================ */
+
+.search-box {
+
+    width: 260px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding:
+        0 13px;
+
+    border:
+        1px solid var(--border-color);
+
+    border-radius: 10px;
+
+    background:
+        #FAFCFA;
+
+    transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+
+.search-box:focus-within {
+
+    border-color:
+        var(--brand-primary);
+
+    box-shadow:
+        0 0 0 3px
+        color-mix(
+            in srgb,
+            var(--brand-primary) 12%,
+            transparent
+        );
+}
+
+
+.search-box span {
+
+    color:
+        var(--text-light);
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background:
+        transparent;
+
+    color:
+        var(--text-primary);
+
+    font-size: 12px;
+}
+
+
+.search-box input::placeholder {
+
+    color:
+        var(--text-muted);
+}
+
+
+/* ============================================================
+   NOTIFICACIONES
+   ============================================================ */
+
+.topbar-button {
+
+    position: relative;
+
+    width: 40px;
+    height: 40px;
+
+    border:
+        1px solid var(--border-color);
+
+    border-radius: 10px;
+
+    background:
+        var(--background-card);
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition-fast),
+        border-color var(--transition-fast);
+}
+
+
+.topbar-button:hover {
+
+    background:
+        var(--background-hover);
+
+    border-color:
+        var(--border-color-dark);
+}
+
+
+.notification-dot {
+
+    position: absolute;
+
+    top: -4px;
+    right: -4px;
+
+    min-width: 16px;
+    height: 16px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    padding:
+        0 3px;
+
+    border-radius:
+        var(--radius-pill);
+
+    background:
+        var(--danger);
+
+    color:
+        var(--text-white);
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+
+/* ============================================================
+   USUARIO
+   ============================================================ */
+
+.user-button {
+
+    height: 44px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding:
+        0 11px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        transparent;
+
+    cursor: pointer;
+}
+
+
+.user-button:hover {
+
+    background:
+        var(--background-hover);
+}
+
+
+.user-avatar {
+
+    width: 32px;
+    height: 32px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--brand-primary),
+            var(--brand-primary-light)
+        );
+
+    color:
+        var(--brand-on-primary);
+
+    font-size: 12px;
+
+    font-weight: 700;
+}
+
+
+.user-data {
+
+    display: flex;
+
+    flex-direction: column;
+
+    text-align: left;
+}
+
+
+.user-data strong {
+
+    font-size: 11px;
+
+    color:
+        var(--text-primary);
+}
+
+
+.user-data span {
+
+    font-size: 9px;
+
+    color:
+        var(--text-light);
+}
+
+
+.arrow {
+
+    color:
+        var(--text-light);
+}
+
+
+/* ============================================================
+   DASHBOARD
+   ============================================================ */
+
+.dashboard {
+
+    flex: 1;
+
+    min-height: 0;
+
+    padding: 26px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    overscroll-behavior: contain;
+
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+}
+
+
+.dashboard::-webkit-scrollbar {
+
+    width: 0;
+    height: 0;
+
+    display: none;
+}
+
+
+/* ============================================================
+   ENCABEZADO DASHBOARD
+   ============================================================ */
+
+.dashboard-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 22px;
+}
+
+
+.dashboard-heading h2 {
+
+    margin: 0;
+
+    color:
+        var(--text-primary);
+
+    font-size: 25px;
+}
+
+
+.dashboard-heading p {
+
+    margin:
+        6px
+        0
+        0;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   BOTÓN PRINCIPAL
+   ============================================================ */
+
+.btn-primary {
+
+    height: 42px;
+
+    padding:
+        0 20px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--brand-primary),
+            var(--brand-primary-light)
+        );
+
+    color:
+        var(--brand-on-primary);
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform var(--transition-fast),
+        filter var(--transition-fast),
+        box-shadow var(--transition-fast);
+}
+
+
+.btn-primary:hover {
+
+    filter:
+        brightness(1.04);
+
+    box-shadow:
+        0 6px 18px
+        color-mix(
+            in srgb,
+            var(--brand-primary) 20%,
+            transparent
+        );
+}
+
+
+.btn-primary:active {
+
+    transform:
+        scale(0.98);
+}
+
+
+/* ============================================================
+   TARJETAS KPI
+   ============================================================ */
+
+.stats-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+.stat-card {
+
+    padding: 18px;
+
+    background:
+        var(--background-card);
+
+    border:
+        1px solid var(--border-color);
+
+    border-radius: 13px;
+}
+
+
+.stat-header {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+}
+
+
+.stat-header span {
+
+    color:
+        var(--text-secondary);
+
+    font-size: 11px;
+}
+
+
+.stat-icon {
+
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 9px;
+
+    background:
+        #EEF3EF;
+
+    font-weight: 700;
+}
+
+
+.stat-icon.prim {
+
+    background:
+        var(--success-light);
+
+    color:
+        var(--success);
+}
+
+.stat-icon.segu {
+
+    background:
+        var(--warning-light);
+
+    color:
+        var(--warning);
+}
+
+
+.stat-icon.terc {
+
+    background:
+        var(--danger-light);
+
+    color:
+        var(--danger);
+}
+
+.stat-icon.cuar {
+
+    background:
+        var(--credit-light);
+
+    color:
+        var(--credit);
+}
+
+
+.stat-value {
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color:
+        var(--text-primary);
+
+    font-size: 22px;
+}
+
+
+.stat-footer {
+
+    color:
+        var(--text-light);
+
+    font-size: 10px;
+}
+
+
+.stat-footer span {
+
+    margin-left: 4px;
+
+    color:
+        var(--text-muted);
+}
+
+
+.stat-footer.positive {
+
+    color:
+        var(--success);
+}
+
+
+.stat-footer.warning {
+
+    color:
+        var(--warning);
+}
+
+
+/* ============================================================
+   SECCIONES Y PANELES
+   ============================================================ */
+
+.section-card,
+.panel {
+
+    background:
+        var(--background-card);
+
+    border:
+        1px solid var(--border-color);
+
+    border-radius: 13px;
+}
+
+
+.section-card {
+
+    padding: 18px;
+
+    margin-bottom: 18px;
+}
+
+
+.section-header {
+
+    margin-bottom: 15px;
+}
+
+
+.section-header h3,
+.panel-header h3 {
+
+    margin: 0;
+
+    color:
+        var(--text-primary);
+
+    font-size: 14px;
+}
+
+
+.section-header p,
+.panel-header p {
+
+    margin:
+        4px
+        0
+        0;
+
+    color:
+        var(--text-light);
+
+    font-size: 10px;
+}
+
+
+/* ============================================================
+   ACCESOS RÁPIDOS
+   ============================================================ */
+
+.quick-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 11px;
+}
+
+
+.quick-action {
+
+    min-height: 66px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 11px;
+
+    padding: 12px;
+
+    border:
+        1px solid var(--border-color);
+
+    border-radius: 10px;
+
+    background:
+        #FBFCFB;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    transition:
+        border-color var(--transition-fast),
+        background var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+
+.quick-action:hover {
+
+    border-color:
+        color-mix(
+            in srgb,
+            var(--brand-primary) 48%,
+            var(--border-color)
+        );
+
+    background:
+        color-mix(
+            in srgb,
+            var(--brand-primary-soft) 45%,
+            #FFFFFF
+        );
+}
+
+
+.quick-action:active {
+
+    transform:
+        scale(0.98);
+}
+
+
+.quick-icon {
+
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 9px;
+
+    background:
+        var(--brand-primary-soft);
+
+    color:
+        var(--brand-primary-hover);
+
+    font-weight: 700;
+}
+
+
+.quick-action strong {
+
+    display: block;
+
+    color:
+        var(--text-primary);
+
+    font-size: 11px;
+}
+
+
+.quick-action small {
+
+    display: block;
+
+    margin-top: 4px;
+
+    color:
+        var(--text-light);
+
+    font-size: 9px;
+}
+
+
+/* ============================================================
+   GRID CENTRAL
+   ============================================================ */
+
+.dashboard-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.6fr)
+        minmax(0, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 18px;
+}
+
+
+.panel {
+
+    min-width: 0;
+
+    padding: 18px;
+}
+
+
+.panel-header {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+
+.panel-header select {
+
+    height: 34px;
+
+    padding:
+        0 10px;
+
+    border:
+        1px solid var(--border-color);
+
+    border-radius: 8px;
+
+    background:
+        var(--background-card);
+
+    color:
+        var(--text-secondary);
+
+    outline: none;
+
+    font-size: 10px;
+}
+
+
+.panel-header select:focus {
+
+    border-color:
+        var(--brand-primary);
+}
+
+
+.text-button {
+
+    border: none;
+
+    background:
+        transparent;
+
+    color:
+        var(--brand-primary-hover);
+
+    font-size: 10px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.text-button:hover {
+
+    color:
+        var(--brand-primary);
+}
+
+
+/* ============================================================
+   GRÁFICA
+   ============================================================ */
+
+.chart {
+
+    position: relative;
+
+    height: 235px;
+
+    padding-left: 45px;
+}
+
+
+.chart-line {
+
+    position: relative;
+
+    height: 25%;
+
+    border-top:
+        1px dashed #E6EBE7;
+}
+
+
+.chart-line span {
+
+    position: absolute;
+
+    left: -43px;
+    top: -6px;
+
+    color:
+        var(--text-muted);
+
+    font-size: 8px;
+}
+
+
+.bars {
+
+    position: absolute;
+
+    inset:
+        0
+        0
+        0
+        45px;
+
+    display: flex;
+
+    justify-content: space-around;
+    align-items: flex-end;
+
+    padding-top: 15px;
+}
+
+
+.bar-group {
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.bar {
+
+    width: 24px;
+
+    min-height: 10px;
+
+    border-radius:
+        6px
+        6px
+        2px
+        2px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--brand-primary-light),
+            var(--brand-primary)
+        );
+
+    opacity: 0.65;
+}
+
+
+.bar.active {
+
+    opacity: 1;
+
+    box-shadow:
+        0 4px 15px
+        color-mix(
+            in srgb,
+            var(--brand-primary) 28%,
+            transparent
+        );
+}
+
+
+.bar-group span {
+
+    color:
+        var(--text-light);
+
+    font-size: 8px;
+}
+
+
+/* ============================================================
+   ALERTAS DE INVENTARIO
+   ============================================================ */
+
+.alert-list {
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.stock-item {
+
+    display: flex;
+
+    align-items: center;
+
+    padding:
+        11px
+        0;
+
+    border-bottom:
+        1px solid #EEF1EF;
+}
+
+
+.stock-item:last-child {
+
+    border-bottom: none;
+}
+
+
+.stock-image {
+
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 10px;
+
+    border-radius: 8px;
+
+    background:
+        var(--background-secondary);
+
+    color:
+        var(--text-secondary);
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+.stock-info {
+
+    min-width: 0;
+
+    flex: 1;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+
+.stock-info strong {
+
+    overflow: hidden;
+
+    color:
+        var(--text-primary);
+
+    font-size: 10px;
+
+    text-overflow: ellipsis;
+
+    white-space: nowrap;
+}
+
+
+.stock-info span {
+
+    margin-top: 4px;
+
+    color:
+        var(--text-light);
+
+    font-size: 9px;
+}
+
+
+.stock-status {
+
+    padding:
+        5px
+        8px;
+
+    border-radius:
+        var(--radius-pill);
+
+    font-size: 8px;
+
+    font-weight: 600;
+}
+
+
+.stock-status.danger {
+
+    background:
+        var(--danger-light);
+
+    color:
+        var(--danger);
+}
+
+
+.stock-status.warning {
+
+    background:
+        var(--warning-light);
+
+    color:
+        var(--warning);
+}
+
+
+/* ============================================================
+   FACTURAS
+   ============================================================ */
+
+.invoices-panel {
+
+    margin-bottom: 20px;
+}
+
+
+.table-wrKentroer {
+
+    width: 100%;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+
+    -ms-overflow-style: none;
+}
+
+
+.table-wrKentroer::-webkit-scrollbar {
+
+    width: 0;
+    height: 0;
+
+    display: none;
+}
+
+
+table {
+
+    width: 100%;
+
+    border-collapse: collapse;
+}
+
+
+th {
+
+    padding:
+        10px
+        12px;
+
+    border-bottom:
+        1px solid var(--border-color);
+
+    color:
+        var(--text-light);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    text-align: left;
+
+    white-space: nowrap;
+}
+
+
+td {
+
+    padding:
+        12px;
+
+    border-bottom:
+        1px solid #F0F2F0;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 10px;
+
+    white-space: nowrap;
+}
+
+
+tbody tr:last-child td {
+
+    border-bottom: none;
+}
+
+
+.invoice-code {
+
+    color:
+        var(--brand-primary-hover);
+
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   BADGES
+   ============================================================ */
+
+.badge {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    padding:
+        5px
+        9px;
+
+    border-radius:
+        var(--radius-pill);
+
+    font-size: 8px;
+
+    font-weight: 600;
+}
+
+
+.badge.success {
+
+    background:
+        var(--success-light);
+
+    color:
+        var(--success);
+}
+
+
+.badge.credit {
+
+    background:
+        var(--credit-light);
+
+    color:
+        var(--credit);
+}
+
+
+.badge.pending {
+
+    background:
+        var(--warning-light);
+
+    color:
+        var(--warning);
+}
+
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+
+.toast {
+
+    position: fixed;
+
+    right: 25px;
+    bottom: 25px;
+
+    z-index: 1000;
+
+    padding:
+        12px
+        17px;
+
+    border-radius:
+        var(--radius-md);
+
+    background:
+        var(--surface-graphite);
+
+    color:
+        var(--text-white);
+
+    font-size: 11px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transform:
+        translateY(10px);
+
+    transition:
+        opacity var(--transition-fast),
+        transform var(--transition-fast);
+}
+
+
+.toast.show {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+}
+
+
+/* ============================================================
+   FILTRO DE BÚSQUEDA
+   ============================================================ */
+
+.search-hidden {
+
+    display: none !important;
+}
+
+
+/* ============================================================
+   RESPONSIVE - 1100 PX
+   ============================================================ */
+
+@media (max-width: 1100px) {
+
+    .stats-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+
+    .quick-grid {
+
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE - 850 PX
+   ============================================================ */
+
+@media (max-width: 850px) {
+
+    .sidebar {
+
+        width:
+            var(--sidebar-width-collapsed);
+    }
+
+
+    .sidebar .nav-text,
+    .sidebar .nav-title,
+    .sidebar .empresa-info {
+
+        display: none;
+    }
+
+
+    .sidebar .sidebar-logo {
+
+        padding: 0;
+
+        justify-content: center;
+    }
+
+
+    .sidebar .logo-completo {
+
+        display: none;
+    }
+
+
+    .sidebar .logo-mini {
+
+        display: block;
+
+        width: 44px;
+        height: 44px;
+    }
+
+
+    .sidebar .nav-item {
+
+        justify-content: center;
+
+        padding: 0;
+
+        gap: 0;
+    }
+
+
+    .sidebar .empresa-mini {
+
+        justify-content: center;
+    }
+
+
+    .dashboard-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .search-box {
+
+        display: none;
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE - 650 PX
+   ============================================================ */
+
+@media (max-width: 650px) {
+
+    .topbar {
+
+        padding:
+            0 16px;
+    }
+
+
+    .dashboard {
+
+        padding: 16px;
+    }
+
+
+    .stats-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .quick-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .dashboard-heading {
+
+        align-items: flex-start;
+
+        gap: 15px;
+
+        flex-direction: column;
+    }
+
+
+    .user-data {
+
+        display: none;
+    }
+}
+
+/* Recursos oficiales: imagotipo expandido y K contraída. */
+.Kentro-imagotipo { width: 154px; height: auto; display: block; object-fit: contain; }
+.Kentro-logo-mini { width: 42px; height: 42px; display: block; object-fit: contain; }
+.sidebar.collapsed .Kentro-logo-mini { width: 40px; height: 40px; }

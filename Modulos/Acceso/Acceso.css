@@ -1,0 +1,618 @@
+/* ============================================================
+   Kentro
+   INTERFAZ DE ACCESO
+   ============================================================ */
+
+
+/* ============================================================
+   CONTENEDOR PRINCIPAL
+   ============================================================ */
+
+.Acceso {
+
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 24px;
+
+    box-sizing: border-box;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 15%,
+            color-mix(
+                in srgb,
+                var(--brand-primary) 11%,
+                transparent
+            ),
+            transparent 32%
+        ),
+
+        linear-gradient(
+            145deg,
+            var(--surface-dark) 0%,
+            var(--surface-graphite) 55%,
+            var(--surface-dark) 100%
+        );
+}
+
+
+/* ============================================================
+   TARJETA
+   ============================================================ */
+
+.Acceso-card {
+
+    width: 100%;
+    max-width: 390px;
+
+    padding:
+        30px
+        32px
+        24px;
+
+    box-sizing: border-box;
+
+    background:
+        rgba(16, 23, 19, 0.96);
+
+    border:
+        1px solid
+        color-mix(
+            in srgb,
+            var(--brand-primary) 18%,
+            transparent
+        );
+
+    border-radius: 20px;
+
+    box-shadow:
+
+        0 25px 70px
+        rgba(0, 0, 0, 0.40),
+
+        0 0 50px
+        color-mix(
+            in srgb,
+            var(--brand-primary) 4%,
+            transparent
+        );
+
+    transition:
+        border-color var(--transition-normal),
+        box-shadow var(--transition-normal);
+}
+
+
+/* ============================================================
+   MARCA
+   ============================================================ */
+
+.marca {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 25px;
+}
+
+
+/* ============================================================
+   LOGO Kentro DINÁMICO
+   ============================================================ */
+
+.marca-Kentro-dinamica {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 9px;
+
+    white-space: nowrap;
+}
+
+
+/* ============================================================
+   K DINÁMICA
+   ============================================================ */
+
+.Kentro-k-acceso {
+
+    width: 42px;
+    height: 42px;
+
+    display: block;
+
+    flex-shrink: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--brand-primary-light),
+            var(--brand-primary),
+            var(--brand-primary-hover)
+        );
+
+
+    /* Chrome / Edge / Electron */
+
+    -webkit-mask-image:
+        url("../../Assets/Iconos/App.png");
+
+    -webkit-mask-repeat:
+        no-repeat;
+
+    -webkit-mask-position:
+        center;
+
+    -webkit-mask-size:
+        contain;
+
+
+    /* Estándar */
+
+    mask-image:
+        url("../../Assets/Iconos/App.png");
+
+    mask-repeat:
+        no-repeat;
+
+    mask-position:
+        center;
+
+    mask-size:
+        contain;
+}
+
+
+/* ============================================================
+   TEXTO Kentro
+   ============================================================ */
+
+.Kentro-nombre-acceso {
+
+    color:
+        var(--text-white);
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    letter-spacing:
+        -0.5px;
+}
+
+
+/* ============================================================
+   ENCABEZADO
+   ============================================================ */
+
+.encabezado {
+
+    text-align: center;
+
+    margin-bottom: 27px;
+}
+
+
+.encabezado h1 {
+
+    margin:
+        0
+        0
+        7px;
+
+    color:
+        var(--text-white);
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+    letter-spacing:
+        -0.5px;
+}
+
+
+.encabezado p {
+
+    margin: 0;
+
+    color:
+        #8F9A93;
+
+    font-size: 14px;
+}
+
+
+/* ============================================================
+   CAMPOS
+   ============================================================ */
+
+.campo {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 17px;
+}
+
+
+.campo label {
+
+    color:
+        #E7ECE8;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   INPUT WRKentroER
+   ============================================================ */
+
+.input-wrKentroer {
+
+    position: relative;
+
+    width: 100%;
+}
+
+
+/* ============================================================
+   INPUT
+   ============================================================ */
+
+.campo input {
+
+    width: 100%;
+    height: 46px;
+
+    padding:
+        0 14px;
+
+    box-sizing: border-box;
+
+    background:
+        var(--surface-dark);
+
+    border:
+        1px solid #263029;
+
+    border-radius: 10px;
+
+    color:
+        var(--text-white);
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition:
+        border-color var(--transition-fast),
+        box-shadow var(--transition-fast),
+        background var(--transition-fast);
+}
+
+
+.campo input::placeholder {
+
+    color:
+        var(--text-secondary);
+}
+
+
+.campo input:hover {
+
+    border-color:
+        #364139;
+}
+
+
+.campo input:focus {
+
+    background:
+        #0B100D;
+
+    border-color:
+        var(--brand-primary);
+
+    box-shadow:
+        0 0 0 3px
+        color-mix(
+            in srgb,
+            var(--brand-primary) 12%,
+            transparent
+        );
+}
+
+
+/* ============================================================
+   CONTRASEÑA
+   ============================================================ */
+
+.password-wrKentroer input {
+
+    padding-right: 48px;
+}
+
+
+/* ============================================================
+   BOTÓN MOSTRAR / OCULTAR CONTRASEÑA
+   ============================================================ */
+
+.mostrar-password {
+
+    position: absolute;
+
+    top: 50%;
+    right: 8px;
+
+    transform:
+        translateY(-50%);
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 8px;
+
+    background:
+        transparent;
+
+    color:
+        #8F9A93;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+        background var(--transition-fast),
+        color var(--transition-fast);
+}
+
+
+.mostrar-password:hover {
+
+    background:
+        color-mix(
+            in srgb,
+            var(--brand-primary) 9%,
+            transparent
+        );
+
+    color:
+        var(--brand-primary-light);
+}
+
+
+/* Contraseña oculta */
+
+.mostrar-password .fa-toggle-off {
+
+    color:
+        #8F9A93;
+}
+
+
+/* Contraseña visible */
+
+.mostrar-password .fa-toggle-on {
+
+    color:
+        var(--brand-primary);
+}
+
+
+/* ============================================================
+   BOTÓN INICIAR SESIÓN
+   ============================================================ */
+
+.btn-ingresar {
+
+    width: 100%;
+    height: 47px;
+
+    margin-top: 5px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--brand-primary),
+            var(--brand-primary-light)
+        );
+
+    color:
+        var(--brand-on-primary);
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform var(--transition-fast),
+        box-shadow var(--transition-fast),
+        filter var(--transition-fast);
+}
+
+
+.btn-ingresar:hover {
+
+    filter:
+        brightness(1.06);
+
+    box-shadow:
+        0 8px 24px
+        color-mix(
+            in srgb,
+            var(--brand-primary) 22%,
+            transparent
+        );
+}
+
+
+.btn-ingresar:active {
+
+    transform:
+        scale(0.985);
+}
+
+
+/* ============================================================
+   MENSAJE
+   ============================================================ */
+
+.mensaje {
+
+    min-height: 20px;
+
+    margin:
+        15px
+        0
+        0;
+
+    text-align: center;
+
+    color:
+        var(--warning);
+
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   PIE
+   ============================================================ */
+
+.pie-acceso {
+
+    margin-top: 18px;
+
+    padding-top: 18px;
+
+    border-top:
+        1px solid rgba(255, 255, 255, 0.06);
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    color:
+        var(--text-secondary);
+
+    font-size: 11px;
+}
+
+
+.pie-acceso strong {
+
+    color:
+        var(--brand-primary);
+
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 500px) {
+
+    .Acceso {
+
+        padding: 16px;
+    }
+
+
+    .Acceso-card {
+
+        max-width: 360px;
+
+        padding:
+            26px
+            24px
+            22px;
+    }
+
+
+    .Kentro-k-acceso {
+
+        width: 38px;
+        height: 38px;
+    }
+
+
+    .Kentro-nombre-acceso {
+
+        font-size: 23px;
+    }
+}
+
+.acceso-imagotipo {
+    width: min(245px, 78%);
+    height: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.Kentro-k-acceso { object-fit: contain; background: none; mask: none; -webkit-mask: none; }
+
+/* Composición premium alineada con la identidad oficial de Kentro. */
+.Acceso { gap: clamp(32px, 7vw, 112px); }
+.acceso-brand-panel { width: min(420px, 34vw); min-height: 560px; display: flex; flex-direction: column; justify-content: space-between; color: var(--text-white); }
+.acceso-brand-top { display: flex; align-items: center; gap: 12px; }
+.acceso-brand-mark { width: 38px; height: 38px; display: block; background: linear-gradient(135deg, var(--app-accent-light), var(--app-accent)); -webkit-mask: url("../../Assets/Iconos/App.png") center / contain no-repeat; mask: url("../../Assets/Iconos/App.png") center / contain no-repeat; }
+.acceso-brand-name { font-size: 25px; font-weight: 700; letter-spacing: -.6px; }
+.acceso-brand-copy { margin: auto 0; padding: 64px 0; }
+.eyebrow { color: var(--app-accent); font-size: 11px; font-weight: 700; letter-spacing: 2.6px; }
+.acceso-brand-copy h2 { max-width: 410px; margin: 18px 0; font-size: clamp(34px, 3.2vw, 52px); line-height: 1.08; letter-spacing: -1.8px; }
+.acceso-brand-copy h2 span { color: var(--app-accent); }
+.acceso-brand-copy p { max-width: 340px; color: #AFC4DE; font-size: 15px; line-height: 1.7; }
+.acceso-brand-footer { display: flex; align-items: center; gap: 9px; color: #AFC4DE; font-size: 12px; }
+.brand-status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--app-accent); box-shadow: 0 0 0 5px color-mix(in srgb, var(--app-accent) 18%, transparent); }
+.acceso-mobile-intro { display: none; }
+.acceso-security-note { display: flex; justify-content: center; align-items: center; gap: 8px; margin-top: 18px; color: #8FA8C5; font-size: 11px; }
+.acceso-security-note i { color: var(--app-accent); }
+.pie-acceso { align-items: center; gap: 7px; }
+.pie-acceso-logo { width: 72px; height: auto; display: block; object-fit: contain; }
+.Acceso { background: radial-gradient(circle at 50% 15%, color-mix(in srgb, var(--brand-primary) 11%, transparent), transparent 32%), linear-gradient(145deg, var(--login-background-start), var(--login-background-middle) 55%, var(--login-background-end)); }
+.acceso-brand-copy h2 { color: var(--login-title); }
+.acceso-brand-copy h2 span,.eyebrow,.acceso-security-note i { color: var(--login-accent); }
+.acceso-brand-copy p,.acceso-brand-footer,.acceso-mobile-intro p { color: var(--login-muted); }
+.Acceso-card { max-width: 410px; background: linear-gradient(155deg, rgba(15,37,71,.98), rgba(7,20,38,.98)); border-radius: 16px; }
+.Kentro-nombre-acceso { color: var(--text-white); }
+@media (max-width: 880px) { .Acceso { gap: 0; } .acceso-brand-panel { display: none; } .acceso-mobile-intro { display: block; margin: -4px 0 26px; text-align: center; } .acceso-mobile-intro p { margin-top: 8px; color: #AFC4DE; font-size: 13px; } }

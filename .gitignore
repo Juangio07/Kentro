@@ -1,6 +1,23 @@
+# Dependencias
 node_modules/
+
+# Builds de Electron
 dist/
 out/
-build/
-.env
+release/
+
+# Logs
 *.log
+npm-debug.log*
+
+# Variables privadas
+.env
+.env.*
+!.env.example
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# VS Code local
+.vscode/

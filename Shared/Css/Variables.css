@@ -1,239 +1,43 @@
+/* Tokens compartidos. Los valores de identidad son fallback; en ejecución los sobrescribe AppConfig.js mediante FixelarGlobal.js. */
 :root {
-
-    /* ==========================================================
-       KENTRO
-       IDENTIDAD DE MARCA PERSONALIZABLE
-       ========================================================== */
-
-    /*
-       Estos colores forman parte de la identidad oficial de Kentro.
-    */
-
-    --brand-primary: #2563FF;
-
-    --brand-primary-hover: #0EA5FF;
-
-    --brand-primary-light: #22D3EE;
-
-    --brand-primary-soft: #DBF7FF;
-
-    /*
-       Color del texto que se muestra
-       encima del color principal.
-    */
-
-    --brand-on-primary: #FFFFFF;
-
-
-
-    /* ==========================================================
-       IDENTIDAD BASE DE KENTRO
-       ========================================================== */
-
-    --kentro-black: #071426;
-
-    --kentro-graphite: #0B1E3F;
-
-    --kentro-dark-soft: #0F2547;
-
-    --kentro-green: #14B8A6;
-
-    --kentro-green-light: #22D3EE;
-
-    --kentro-cobalt: #2563FF;
-    --kentro-blue: #0EA5FF;
-    --kentro-cyan: #22D3EE;
-    --kentro-teal: #14B8A6;
-
-
-
-    /* ==========================================================
-       FONDOS
-       ========================================================== */
-
-    --background-main: #F4F8FC;
-
-    --background-secondary: #EAF2FA;
-
-    --background-card: #FFFFFF;
-
-    --background-sidebar: #0B1E3F;
-
-    --background-sidebar-secondary: #0F2547;
-
-    --background-input: #FFFFFF;
-
-    --background-hover: #F1F7FF;
-
-
-
-    /* ==========================================================
-       TEXTOS
-       ========================================================== */
-
-    --text-primary: #111813;
-
-    --text-secondary: #66706A;
-
-    --text-light: #8A948E;
-
-    --text-muted: #9DA6A0;
-
-    --text-white: #FFFFFF;
-
-    --text-sidebar: #B8C1BB;
-
-
-
-    /* ==========================================================
-       BORDES
-       ========================================================== */
-
-    --border-color: #E2E8E3;
-
-    --border-color-dark: #CDD6CF;
-
-    --border-sidebar:
-        rgba(255, 255, 255, 0.06);
-
-
-
-    /* ==========================================================
-       ESTADOS DEL SISTEMA
-       NO PERSONALIZABLES
-       ========================================================== */
-
-    /*
-       Estos colores conservan siempre el mismo significado
-       sin importar la identidad del negocio.
-    */
-
-    --success: #16A34A;
-
-    --success-hover: #15803D;
-
-    --success-light: #DCFCE7;
-
-
-    --warning: #F59E0B;
-
-    --warning-hover: #D97706;
-
-    --warning-light: #FEF3C7;
-
-
-    --danger: #DC2626;
-
-    --danger-hover: #B91C1C;
-
-    --danger-light: #FEE2E2;
-
-
-    --info: #0EA5E9;
-
-    --info-hover: #0284C7;
-
-    --info-light: #E0F2FE;
-
-
-
-    /* ==========================================================
-       CRÉDITOS / ESTADOS ESPECIALES
-       ========================================================== */
-
-    --credit: #7C3AED;
-
-    --credit-light: #EDE9FE;
-
-
-
-    /* ==========================================================
-       SOMBRAS
-       ========================================================== */
-
-    --shadow-xs:
-        0 1px 2px
-        rgba(7, 20, 38, 0.06);
-
-
-    --shadow-sm:
-        0 2px 6px
-        rgba(7, 20, 38, 0.08);
-
-
-    --shadow-md:
-        0 6px 18px
-        rgba(7, 20, 38, 0.10);
-
-
-    --shadow-lg:
-        0 18px 45px
-        rgba(7, 20, 38, 0.14);
-
-
-
-    /* ==========================================================
-       SOMBRAS DE MARCA
-       ========================================================== */
-
-    --shadow-brand:
-        0 8px 24px
-        rgba(37, 99, 255, 0.20);
-
-
-    --focus-brand:
-        0 0 0 3px
-        rgba(37, 99, 255, 0.16);
-
-
-
-    /* ==========================================================
-       BORDES REDONDEADOS
-       ========================================================== */
-
-    --radius-xs: 4px;
-
-    --radius-sm: 8px;
-
-    --radius-md: 12px;
-
-    --radius-lg: 16px;
-
-    --radius-xl: 18px;
-
-    --radius-pill: 999px;
-
-
-
-    /* ==========================================================
-       TRANSICIONES
-       ========================================================== */
-
-    --transition-fast:
-        0.15s ease;
-
-    --transition-normal:
-        0.25s ease;
-
-    --transition-slow:
-        0.35s ease;
-
-
-
-    /* ==========================================================
-       SIDEBAR
-       ========================================================== */
-
-    --sidebar-width: 245px;
-
-    --sidebar-width-collapsed: 78px;
-
-
-
-    /* ==========================================================
-       TOPBAR
-       ========================================================== */
-
-    --topbar-height: 76px;
-
+  --background-main: #f4f8fc;
+  --background-secondary: #eaf2fa;
+  --background-card: #ffffff;
+  --background-input: #ffffff;
+  --background-hover: #f1f7ff;
+  --text-primary: #111813;
+  --text-secondary: #66706a;
+  --text-light: #8a948e;
+  --text-muted: #9da6a0;
+  --text-white: #ffffff;
+  --text-sidebar: #b8c1bb;
+  --border-color: #e2e8e3;
+  --border-color-dark: #cdd6cf;
+  --border-sidebar: rgb(255 255 255 / 6%);
+  --success: #16a34a;
+  --success-light: #dcfce7;
+  --warning: #f59e0b;
+  --warning-light: #fef3c7;
+  --danger: #dc2626;
+  --danger-light: #fee2e2;
+  --credit: #7c3aed;
+  --credit-light: #ede9fe;
+  --font-family: Inter, "Segoe UI", Arial, Helvetica, sans-serif;
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 18px;
+  --radius-pill: 999px;
+  --sidebar-width: 245px;
+  --sidebar-width-collapsed: 78px;
+  --topbar-height: 76px;
+  --transition-fast: 0.15s ease;
+  --transition-normal: 0.25s ease;
+  --transition-slow: 0.35s ease;
+  --shadow-sm: 0 2px 6px rgb(7 20 38 / 8%);
+  --shadow-md: 0 6px 18px rgb(7 20 38 / 10%);
+  --shadow-lg: 0 18px 45px rgb(7 20 38 / 14%);
+  --shadow-brand: 0 8px 24px rgb(37 99 255 / 20%);
+  --focus-brand: 0 0 0 3px rgb(37 99 255 / 16%);
 }

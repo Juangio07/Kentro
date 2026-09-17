@@ -19,9 +19,9 @@ body {
         Helvetica,
         sans-serif;
 
-    background: var(--color-background);
+    background: var(--background-main);
 
-    color: var(--color-text);
+    color: var(--text-primary);
 }
 
 button,
